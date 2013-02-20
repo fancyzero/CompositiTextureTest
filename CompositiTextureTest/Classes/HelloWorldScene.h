@@ -14,6 +14,7 @@ public:
     
     // a selector callback
     void menuCloseCallback(CCObject* pSender);
+    virtual void ccTouchesEnded(cocos2d::CCSet* touches, cocos2d::CCEvent* event);
 
     // preprocessor macro for "static create()" constructor ( node() deprecated )
     CREATE_FUNC(HelloWorld);

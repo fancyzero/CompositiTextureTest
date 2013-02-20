@@ -206,10 +206,14 @@
 		041B200816D1D147009CD268 /* CCPhysicsSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 041B200716D1D147009CD268 /* CCPhysicsSprite.cpp */; };
 		041B200F16D1D147009CD268 /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 041B200E16D1D147009CD268 /* AppDelegate.cpp */; };
 		041B201216D1D147009CD268 /* HelloWorldScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 041B201116D1D147009CD268 /* HelloWorldScene.cpp */; };
+		041B201A16D1DD31009CD268 /* TextureCompositiion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 041B201816D1DD31009CD268 /* TextureCompositiion.cpp */; };
+		041B201E16D36720009CD268 /* 2048test.png in Resources */ = {isa = PBXBuildFile; fileRef = 041B201D16D3671F009CD268 /* 2048test.png */; };
+		04711E4316D4678C006F870D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04711E4216D4678C006F870D /* Default-568h@2x.png */; };
+		047FA1BE16D464CA005BFD31 /* 1024test.png in Resources */ = {isa = PBXBuildFile; fileRef = 047FA1BD16D464CA005BFD31 /* 1024test.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		041B1D5C16D1D143009CD268 /* CompositiTextureTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CompositiTextureTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		041B1D5C16D1D143009CD268 /* ShotAndRun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShotAndRun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		041B1D6016D1D143009CD268 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		041B1D6216D1D143009CD268 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		041B1D6416D1D143009CD268 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
@@ -648,6 +652,11 @@
 		041B200E16D1D147009CD268 /* AppDelegate.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = AppDelegate.cpp; path = Classes/AppDelegate.cpp; sourceTree = "<group>"; };
 		041B201016D1D147009CD268 /* HelloWorldScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HelloWorldScene.h; path = Classes/HelloWorldScene.h; sourceTree = "<group>"; };
 		041B201116D1D147009CD268 /* HelloWorldScene.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = HelloWorldScene.cpp; path = Classes/HelloWorldScene.cpp; sourceTree = "<group>"; };
+		041B201816D1DD31009CD268 /* TextureCompositiion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TextureCompositiion.cpp; sourceTree = "<group>"; };
+		041B201916D1DD31009CD268 /* TextureCompositiion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextureCompositiion.h; sourceTree = "<group>"; };
+		041B201D16D3671F009CD268 /* 2048test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 2048test.png; path = Resources/2048test.png; sourceTree = "<group>"; };
+		04711E4216D4678C006F870D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
+		047FA1BD16D464CA005BFD31 /* 1024test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1024test.png; path = Resources/1024test.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -682,7 +691,7 @@
 		041B1D5D16D1D143009CD268 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				041B1D5C16D1D143009CD268 /* CompositiTextureTest.app */,
+				041B1D5C16D1D143009CD268 /* ShotAndRun.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -717,6 +726,9 @@
 		041B1D7116D1D143009CD268 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				04711E4216D4678C006F870D /* Default-568h@2x.png */,
+				047FA1BD16D464CA005BFD31 /* 1024test.png */,
+				041B201D16D3671F009CD268 /* 2048test.png */,
 				041B1D7216D1D143009CD268 /* CloseNormal.png */,
 				041B1D7416D1D143009CD268 /* CloseSelected.png */,
 				041B1D7616D1D143009CD268 /* Default.png */,
@@ -1559,6 +1571,8 @@
 				041B200E16D1D147009CD268 /* AppDelegate.cpp */,
 				041B201016D1D147009CD268 /* HelloWorldScene.h */,
 				041B201116D1D147009CD268 /* HelloWorldScene.cpp */,
+				041B201816D1DD31009CD268 /* TextureCompositiion.cpp */,
+				041B201916D1DD31009CD268 /* TextureCompositiion.h */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -1580,7 +1594,7 @@
 			);
 			name = CompositiTextureTest;
 			productName = CompositiTextureTest;
-			productReference = 041B1D5C16D1D143009CD268 /* CompositiTextureTest.app */;
+			productReference = 041B1D5C16D1D143009CD268 /* ShotAndRun.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -1625,6 +1639,9 @@
 				041B1D8516D1D143009CD268 /* Icon@2x.png in Resources */,
 				041B1D8716D1D143009CD268 /* iTunesArtwork in Resources */,
 				041B1E1D16D1D144009CD268 /* ChangeLog in Resources */,
+				041B201E16D36720009CD268 /* 2048test.png in Resources */,
+				047FA1BE16D464CA005BFD31 /* 1024test.png in Resources */,
+				04711E4316D4678C006F870D /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1813,6 +1830,7 @@
 				041B200816D1D147009CD268 /* CCPhysicsSprite.cpp in Sources */,
 				041B200F16D1D147009CD268 /* AppDelegate.cpp in Sources */,
 				041B201216D1D147009CD268 /* HelloWorldScene.cpp in Sources */,
+				041B201A16D1DD31009CD268 /* TextureCompositiion.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1844,7 +1862,7 @@
 					"\"$(PROJECT_NAME)/libs/cocos2dx/platform/third_party/ios\"",
 					"\"$(PROJECT_NAME)/libs/cocos2dx/platform/ios\"",
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1872,7 +1890,7 @@
 					"\"$(PROJECT_NAME)/libs/cocos2dx/platform/third_party/ios\"",
 					"\"$(PROJECT_NAME)/libs/cocos2dx/platform/ios\"",
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1883,12 +1901,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer: ZHOU LIN (3T8872A55A)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: ZHOU LIN (3T8872A55A)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = CompositiTextureTest/Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					DEBUG,
+					"COCOS2D_DEBUG=2",
+					USE_FILE32API,
+					CC_TARGET_OS_IPHONE,
+				);
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				INFOPLIST_FILE = CompositiTextureTest/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/CompositiTextureTest/libs/cocos2dx/platform/third_party/ios/libraries\"",
@@ -1897,7 +1924,9 @@
 					"-lxml2",
 					"-lz",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ShotAndRun;
+				PROVISIONING_PROFILE = "6ED711D5-2763-42AD-B205-7A4E0CC3EEDF";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6ED711D5-2763-42AD-B205-7A4E0CC3EEDF";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1906,11 +1935,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer: ZHOU LIN (3T8872A55A)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: ZHOU LIN (3T8872A55A)";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = CompositiTextureTest/Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				INFOPLIST_FILE = CompositiTextureTest/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/CompositiTextureTest/libs/cocos2dx/platform/third_party/ios/libraries\"",
@@ -1919,7 +1951,9 @@
 					"-lxml2",
 					"-lz",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ShotAndRun;
+				PROVISIONING_PROFILE = "6ED711D5-2763-42AD-B205-7A4E0CC3EEDF";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6ED711D5-2763-42AD-B205-7A4E0CC3EEDF";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1944,6 +1978,7 @@
 				041B201716D1D148009CD268 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
