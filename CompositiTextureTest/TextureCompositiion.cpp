@@ -45,7 +45,7 @@ namespace CCHelper
         else
             m_cells[cell_index/8] =  (m_cells[cell_index/8] | (1<< (cell_index%8)));
         // 检查该cell对应的texture是否全部为空闲，是则删除该贴图
-        if ( empty )
+        if ( 0 & empty )
         {
             int cells_per_tex = ( m_texture_width / m_cell_width ) * ( m_texture_height / m_cell_height );
             int cell_index_start = cell_index / cells_per_tex * cells_per_tex;
@@ -85,6 +85,9 @@ namespace CCHelper
     
     CCTexture2D* TextureCompGroup::obtain_texture(int cell_index)
     {
+    //    CCTexture2D * tttt = (CCTextureCache::sharedTextureCache()->addImage("1024test.png"));
+  //      tttt->retain();
+//        return tttt;
         int cells_per_tex = ( m_texture_width / m_cell_width ) * ( m_texture_height / m_cell_height );
         int texture_index = cell_index / cells_per_tex;
         assert( texture_index <= m_textures->count() );//
@@ -113,6 +116,7 @@ namespace CCHelper
              }
              */
             new_tex->initWithData( rgba8888_data, kCCTexture2DPixelFormat_RGBA8888, m_texture_width, m_texture_height, CCSizeMake((float)m_texture_width, (float)m_texture_height) );
+            CHECK_GL_ERROR_DEBUG();
             delete[] rgba8888_data;
             //new_tex->retain();
             CCLog("create new texture");
@@ -158,7 +162,7 @@ namespace CCHelper
         CCImage img;
         img.initWithImageFile(filename);
         CCImage* image = &img;
-        glUseProgram(0);//disable shader
+
         //        CCObject* obj;
         if ( image == NULL )
             return NULL;
@@ -244,14 +248,26 @@ namespace CCHelper
                 //往已有贴图的空闲cell中插入图片
                 //使用TexSubImage2D修改贴图的部分区域
                 comp_texture_used = (CCTexture2D*)comp_group->obtain_texture(cell_index);
-                //glBindTexture( GL_TEXTURE_2D, compo_tex_used->getName());
+
+                
+                CCLog("update texture sub image: texture: %x name: %d", comp_texture_used, comp_texture_used->getName());
+                glBindTexture( GL_TEXTURE_2D, comp_texture_used->getName());
+                CHECK_GL_ERROR_DEBUG();
+                glPixelStorei(GL_UNPACK_ALIGNMENT,4);
+                CHECK_GL_ERROR_DEBUG();
+                
+                //glUseProgram(0);//disable shader
+                //CHECK_GL_ERROR_DEBUG();
+                
                 glTexSubImage2D( GL_TEXTURE_2D, 0, frame_rect.origin.x, frame_rect.origin.y, frame_rect.size.width, frame_rect.size.height, GL_RGBA, GL_UNSIGNED_BYTE, data);
+                CHECK_GL_ERROR_DEBUG(); 
+                
                 if ( sub_data != NULL )
                 {
                     delete[] sub_data;
                     sub_data = NULL;
                 }
-                CHECK_GL_ERROR_DEBUG();
+
                 break;
             }
             

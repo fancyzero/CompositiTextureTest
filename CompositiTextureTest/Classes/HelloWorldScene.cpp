@@ -37,36 +37,40 @@ bool HelloWorld::init()
     //    you may modify it.
     
     // add a "close" icon to exit the progress. it's an autorelease object
-    CCMenuItemImage *pCloseItem = CCMenuItemImage::create(
-                                                          "CloseNormal.png",
-                                                          "CloseSelected.png",
-                                                          this,
-                                                          menu_selector(HelloWorld::menuCloseCallback) );
-    pCloseItem->setPosition( ccp(CCDirector::sharedDirector()->getWinSize().width - 20, 20) );
+    //CCMenuItemImage *pCloseItem = CCMenuItemImage::create(
+      //                                                    "CloseNormal.png",
+        //                                                  "CloseSelected.png",
+          //                                                this,
+            //                                              menu_selector(HelloWorld::menuCloseCallback) );
+    //pCloseItem->setPosition( ccp(CCDirector::sharedDirector()->getWinSize().width - 20, 20) );
     
     // create menu, it's an autorelease object
-    CCMenu* pMenu = CCMenu::create(pCloseItem, NULL);
-    pMenu->setPosition( CCPointZero );
-    this->addChild(pMenu, 1);
+    //CCMenu* pMenu = CCMenu::create(pCloseItem, NULL);
+    //pMenu->setPosition( CCPointZero );
+    //this->addChild(pMenu, 1);
     
     /////////////////////////////
     // 3. add your codes below...
     
     // add a label shows "Hello World"
     // create and initialize a label
-    CCLabelTTF* pLabel = CCLabelTTF::create("Hello World", "Thonburi", 34);
+    //CCLabelTTF* pLabel = CCLabelTTF::create("Hello World", "Thonburi", 34);
     
     // ask director the window size
-    CCSize size = CCDirector::sharedDirector()->getWinSize();
+    //CCSize size = CCDirector::sharedDirector()->getWinSize();
     
     // position the label on the center of the screen
-    pLabel->setPosition( ccp(size.width / 2, size.height - 20) );
+    //pLabel->setPosition( ccp(size.width / 2, size.height - 20) );
     
     // add the label as a child to this layer
-    this->addChild(pLabel, 1);
+    //this->addChild(pLabel, 1);
+    
+    //CCTexture2D* tex = CCTextureCache::sharedTextureCache()->addImage("1024test.png");
+    
+    //CCHelper::CCSpriteFrameEx* frm = CCHelper::CCSpriteFrameEx::createWithTexture(tex, CCRectMake(0, 0, 40, 40));
     
     // add "HelloWorld" splash screen"
-    //CCSprite* pSprite = CCSprite::create("HelloWorld.png");
+    //CCSprite* pSprite = CCSprite::createWithSpriteFrame(frm);//("1024test.png");
     
     // position the sprite on the center of the screen
     //pSprite->setPosition( ccp(size.width/2, size.height/2) );
@@ -86,7 +90,10 @@ void HelloWorld::ccTouchesEnded(CCSet* touches, CCEvent* event)
     for ( int i = 0; i < 1; i++ )
     {
         CCSpriteFrame* spfrm = tcm.load_spriteframe_from_file( "1024test.png", CCRectMake((iframes%perline)*40, (iframes/perline)*40, 40, 40) );
+        //CCSpriteFrame* spfrm = tcm.load_spriteframe_from_file( "1024test.png", CCRectMake(0,0, 40, 40) );
+        //spfrm->retain();
         assert( spfrm );
+
         CCSprite* testspr;
         retaincount_test_spr = testspr = CCSprite::createWithSpriteFrame(spfrm );
         //testspr->setPosition( ccp(0,0));
