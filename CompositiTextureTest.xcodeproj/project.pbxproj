@@ -206,14 +206,15 @@
 		041B200816D1D147009CD268 /* CCPhysicsSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 041B200716D1D147009CD268 /* CCPhysicsSprite.cpp */; };
 		041B200F16D1D147009CD268 /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 041B200E16D1D147009CD268 /* AppDelegate.cpp */; };
 		041B201216D1D147009CD268 /* HelloWorldScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 041B201116D1D147009CD268 /* HelloWorldScene.cpp */; };
-		041B201A16D1DD31009CD268 /* TextureCompositiion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 041B201816D1DD31009CD268 /* TextureCompositiion.cpp */; };
 		041B201E16D36720009CD268 /* 2048test.png in Resources */ = {isa = PBXBuildFile; fileRef = 041B201D16D3671F009CD268 /* 2048test.png */; };
 		04711E4316D4678C006F870D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04711E4216D4678C006F870D /* Default-568h@2x.png */; };
 		047FA1BE16D464CA005BFD31 /* 1024test.png in Resources */ = {isa = PBXBuildFile; fileRef = 047FA1BD16D464CA005BFD31 /* 1024test.png */; };
+		049A3D4516D5E86A002E0152 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 049A3D4416D5E86A002E0152 /* README */; };
+		04ED07F616D5CE6200DF9068 /* TextureCompositiion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04ED07F416D5CE6200DF9068 /* TextureCompositiion.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		041B1D5C16D1D143009CD268 /* ShotAndRun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShotAndRun.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		041B1D5C16D1D143009CD268 /* CompositiTextureTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CompositiTextureTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		041B1D6016D1D143009CD268 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		041B1D6216D1D143009CD268 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		041B1D6416D1D143009CD268 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
@@ -652,11 +653,12 @@
 		041B200E16D1D147009CD268 /* AppDelegate.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = AppDelegate.cpp; path = Classes/AppDelegate.cpp; sourceTree = "<group>"; };
 		041B201016D1D147009CD268 /* HelloWorldScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HelloWorldScene.h; path = Classes/HelloWorldScene.h; sourceTree = "<group>"; };
 		041B201116D1D147009CD268 /* HelloWorldScene.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = HelloWorldScene.cpp; path = Classes/HelloWorldScene.cpp; sourceTree = "<group>"; };
-		041B201816D1DD31009CD268 /* TextureCompositiion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TextureCompositiion.cpp; sourceTree = "<group>"; };
-		041B201916D1DD31009CD268 /* TextureCompositiion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextureCompositiion.h; sourceTree = "<group>"; };
 		041B201D16D3671F009CD268 /* 2048test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 2048test.png; path = Resources/2048test.png; sourceTree = "<group>"; };
 		04711E4216D4678C006F870D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		047FA1BD16D464CA005BFD31 /* 1024test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1024test.png; path = Resources/1024test.png; sourceTree = "<group>"; };
+		049A3D4416D5E86A002E0152 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		04ED07F416D5CE6200DF9068 /* TextureCompositiion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TextureCompositiion.cpp; path = Classes/TextureCompositiion.cpp; sourceTree = "<group>"; };
+		04ED07F516D5CE6200DF9068 /* TextureCompositiion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextureCompositiion.h; path = Classes/TextureCompositiion.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -691,7 +693,7 @@
 		041B1D5D16D1D143009CD268 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				041B1D5C16D1D143009CD268 /* ShotAndRun.app */,
+				041B1D5C16D1D143009CD268 /* CompositiTextureTest.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -719,6 +721,7 @@
 				041B1D9216D1D143009CD268 /* libs */,
 				041B200C16D1D147009CD268 /* Classes */,
 				041B200A16D1D147009CD268 /* Supporting Files */,
+				049A3D4416D5E86A002E0152 /* README */,
 			);
 			path = CompositiTextureTest;
 			sourceTree = "<group>";
@@ -1567,12 +1570,12 @@
 		041B200C16D1D147009CD268 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				04ED07F416D5CE6200DF9068 /* TextureCompositiion.cpp */,
+				04ED07F516D5CE6200DF9068 /* TextureCompositiion.h */,
 				041B200D16D1D147009CD268 /* AppDelegate.h */,
 				041B200E16D1D147009CD268 /* AppDelegate.cpp */,
 				041B201016D1D147009CD268 /* HelloWorldScene.h */,
 				041B201116D1D147009CD268 /* HelloWorldScene.cpp */,
-				041B201816D1DD31009CD268 /* TextureCompositiion.cpp */,
-				041B201916D1DD31009CD268 /* TextureCompositiion.h */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -1594,7 +1597,7 @@
 			);
 			name = CompositiTextureTest;
 			productName = CompositiTextureTest;
-			productReference = 041B1D5C16D1D143009CD268 /* ShotAndRun.app */;
+			productReference = 041B1D5C16D1D143009CD268 /* CompositiTextureTest.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -1642,6 +1645,7 @@
 				041B201E16D36720009CD268 /* 2048test.png in Resources */,
 				047FA1BE16D464CA005BFD31 /* 1024test.png in Resources */,
 				04711E4316D4678C006F870D /* Default-568h@2x.png in Resources */,
+				049A3D4516D5E86A002E0152 /* README in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1830,7 +1834,7 @@
 				041B200816D1D147009CD268 /* CCPhysicsSprite.cpp in Sources */,
 				041B200F16D1D147009CD268 /* AppDelegate.cpp in Sources */,
 				041B201216D1D147009CD268 /* HelloWorldScene.cpp in Sources */,
-				041B201A16D1DD31009CD268 /* TextureCompositiion.cpp in Sources */,
+				04ED07F616D5CE6200DF9068 /* TextureCompositiion.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1901,8 +1905,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer: ZHOU LIN (3T8872A55A)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: ZHOU LIN (3T8872A55A)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1924,9 +1928,8 @@
 					"-lxml2",
 					"-lz",
 				);
-				PRODUCT_NAME = ShotAndRun;
-				PROVISIONING_PROFILE = "6ED711D5-2763-42AD-B205-7A4E0CC3EEDF";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6ED711D5-2763-42AD-B205-7A4E0CC3EEDF";
+				PRODUCT_NAME = CompositiTextureTest;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1935,8 +1938,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer: ZHOU LIN (3T8872A55A)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: ZHOU LIN (3T8872A55A)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = CompositiTextureTest/Prefix.pch;
@@ -1951,9 +1954,8 @@
 					"-lxml2",
 					"-lz",
 				);
-				PRODUCT_NAME = ShotAndRun;
-				PROVISIONING_PROFILE = "6ED711D5-2763-42AD-B205-7A4E0CC3EEDF";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6ED711D5-2763-42AD-B205-7A4E0CC3EEDF";
+				PRODUCT_NAME = CompositiTextureTest;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};

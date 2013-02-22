@@ -1,0 +1,14 @@
+TextureComposition 贴图动态拼合
+使用方法：
+将 TextureComposition.h 和 TextureComposition.cpp 加入工程
+构造一个 TextureCompositionManager，用户自行维护其生命周期，一般该周期和游戏一样便可，
+调用 TextureCompositionManager的load_spriteframe_from_file方法，输入文件名和需要用到的rect则会得到一个对应的CCSpriteFrame
+注意：返回的CCSpriteFrame对象因和使用该对象的CCSprite保持相同的生命周期，如果提早释放CCSpriteFrame，则和这个Frame对应的贴图资源可能被释放
+当不再使用该CCSpriteFrame后，释放这个Frame便可
+
+*调用 TextureCompositionManager的get_memory_usage方法，可以查看资源占用
+
+例程使用方法：
+编译、运行该程序，在ios模拟器或者硬件上点击一次屏幕，会从一张1024x1024的图片中取出一个40x40的贴图，存放到一个动态贴图中，屏幕上显示由这个图片创建出的精灵
+
+限制：目前只支持RGBA8888的贴图格式

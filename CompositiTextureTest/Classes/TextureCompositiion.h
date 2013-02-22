@@ -128,11 +128,17 @@ namespace CCHelper
          释放一个frame: 减少一个frame的引用计数，为0时使对应的cell变为空闲，如果整张贴图的所有cell都空闲则删除这个贴图
          */
         void release_frame( const frame_src_def& frame_def );
+        /*
+         设置用来拼合贴图的动态贴图的大小
+         */
+        void set_comp_texture_size( int width, int height );
     protected:
         
         cocos2d::CCSpriteFrame* add_image_from_file( const char* filename, cocos2d::CCRect rect, TextureCompGroup* comp_group );
         TextureCompGroup* get_comp_group( int cell_width, int cell_height );
         
+        int                                     m_comp_texture_width;
+        int                                     m_comp_texture_height;
         typedef std::vector<TextureCompGroup*> TEXTURECOMPGROUPS;
         typedef std::map<frame_src_def, frame_data> FRAMECACHE;
         TEXTURECOMPGROUPS                       m_texture_groups;

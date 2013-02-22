@@ -85,9 +85,6 @@ namespace CCHelper
     
     CCTexture2D* TextureCompGroup::obtain_texture(int cell_index)
     {
-    //    CCTexture2D * tttt = (CCTextureCache::sharedTextureCache()->addImage("1024test.png"));
-  //      tttt->retain();
-//        return tttt;
         int cells_per_tex = ( m_texture_width / m_cell_width ) * ( m_texture_height / m_cell_height );
         int texture_index = cell_index / cells_per_tex;
         assert( texture_index <= m_textures->count() );//
@@ -142,6 +139,7 @@ namespace CCHelper
      TextureCompositionManager
      */
     TextureCompositionManager::TextureCompositionManager()
+    :m_comp_texture_width(1024),m_comp_texture_height(1024)
     {
         
     }
@@ -202,8 +200,8 @@ namespace CCHelper
             rect.origin.x + rect.size.width > img_size.width ||
             rect.origin.y + rect.size.height > img_size.height )
         {
-            // TODO: warning
             CCLog("can't add image, invalid source rect.");
+            assert(0);
             return NULL;
         }
         // src rect 大小必须符合CompTexureGropup的大小设定
@@ -334,8 +332,8 @@ namespace CCHelper
             comp_group->m_cell_width = cell_width;
             comp_group->m_cell_height = cell_height;
             
-            comp_group->m_texture_width = 1024;
-            comp_group->m_texture_height = 1024;
+            comp_group->m_texture_width = m_comp_texture_width;
+            comp_group->m_texture_height = m_comp_texture_height;
             m_texture_groups.push_back( comp_group );
         }
         
@@ -360,6 +358,12 @@ namespace CCHelper
             TextureCompGroup* comp_group = get_comp_group( rect.size.width, rect.size.height );
             int cell_index = m_frame_cache[def].cell_index;
             int cells_per_tex = ( comp_group->m_texture_width / comp_group->m_cell_width ) * ( comp_group->m_texture_height / comp_group->m_cell_height );
+            if ( cells_per_tex <= 0 )
+            {
+                CCLOG("error: compsition texture too small to holde the image");
+                assert(0);
+                return NULL;
+            }
             int sub_cell_index = cell_index % cells_per_tex;// 转换到对于单个贴图的cellindex
             CCTexture2D* comp_texture_used = (CCTexture2D*)comp_group->obtain_texture( cell_index );
             if ( comp_texture_used == NULL )
@@ -403,7 +407,20 @@ namespace CCHelper
         desc.other_memory_used += m_texture_groups.size() * sizeof(TextureCompGroup);
         for ( TEXTURECOMPGROUPS::iterator it = m_texture_groups.begin(); it != m_texture_groups.end(); ++it )
         {
-            desc.texture_memory_used += (*it)->m_textures->count() * (*it)->m_texture_width * (*it)->m_texture_height * 4;
+            
+            CCObject* obj;
+            CCTexture2D* texture;
+            //for ( int i = 0; i < (*it)->m_textures->count(); i++)
+            //{
+            CCARRAY_FOREACH( ((*it)->m_textures), obj )
+            {
+                assert(obj);
+                if ( obj == NULL )
+                    continue;
+                texture = (CCTexture2D*) obj;
+                if ( texture->getPixelsHigh() * texture->getPixelsWide() >0 )
+                    desc.texture_memory_used += texture->getPixelsHigh() * texture->getPixelsWide() * (texture->bitsPerPixelForFormat(texture->getPixelFormat())/8);
+            }
         }
     }
     
@@ -438,6 +455,12 @@ namespace CCHelper
             m_frame_cache.erase(frame_def);
         }
         
+    }
+    
+    void TextureCompositionManager::set_comp_texture_size(int width, int height)
+    {
+        m_comp_texture_width = width;
+        m_comp_texture_height = height;
     }
     
     /*

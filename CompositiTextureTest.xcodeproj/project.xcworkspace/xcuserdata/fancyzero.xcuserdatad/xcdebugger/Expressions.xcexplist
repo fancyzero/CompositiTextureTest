@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "CCHelper::TextureCompositionManager::add_image_from_file(char const*, cocos2d::CCRect, CCHelper::TextureCompGroup*):TextureCompositiion.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "m_frame_cache">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "HelloWorld::init():HelloWorldScene.cpp">
+      </ContextState>
+      <ContextState
+         contextName = "CCHelper::TextureCompositionManager::release_frame(CCHelper::frame_src_def const&amp;):TextureCompositiion.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "m_frame_cache">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "CCHelper::TextureCompositionManager::add_image(cocos2d::CCImage*, cocos2d::CCRect, CCHelper::TextureCompGroup*):TextureCompositiion.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "frame_rect">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "CCHelper::TextureCompositionManager::get_memory_usage(CCHelper::TextureCompositionManager::mem_usage_desc&amp;):TextureCompositiion.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "(*it)-&gt;m_textures">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

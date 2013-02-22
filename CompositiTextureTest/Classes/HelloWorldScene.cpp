@@ -87,12 +87,17 @@ bool HelloWorld::init()
 void HelloWorld::ccTouchesEnded(CCSet* touches, CCEvent* event)
 {
     int perline = 1024/40;
+    // 下面这一行可以设置动态贴图的大小，默认为1024x1024
+    //tcm.set_comp_texture_size( 128,128 );
     for ( int i = 0; i < 1; i++ )
     {
+        // 通过文件名和一个rect作为参数，load一个frame
+
         CCSpriteFrame* spfrm = tcm.load_spriteframe_from_file( "1024test.png", CCRectMake((iframes%perline)*40, (iframes/perline)*40, 40, 40) );
-        //CCSpriteFrame* spfrm = tcm.load_spriteframe_from_file( "1024test.png", CCRectMake(0,0, 40, 40) );
-        //spfrm->retain();
-        assert( spfrm );
+        assert( spfrm );       
+        // 注意，必须保持返回的引用，否则一旦被autorelease后，会被认为该frame不再有人使用，从而会被挪作他用
+        spfrm->retain();
+
 
         CCSprite* testspr;
         retaincount_test_spr = testspr = CCSprite::createWithSpriteFrame(spfrm );
